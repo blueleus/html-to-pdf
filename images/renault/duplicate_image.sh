@@ -1,0 +1,1 @@
+for i in {1..2000}; do cp image.jpg image-$i.jpg; done
