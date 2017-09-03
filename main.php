@@ -4,7 +4,7 @@ require('ViewGenerator.php');
 require('ConvertHtmlToPdf.php');
 
 $items = array();
-for ($i=1; $i < 1800; $i++) { 
+for ($i=1; $i < 50; $i++) { 
   $items[] = [
   'article_id' => $i,
   'description' => 'aqui toy',
@@ -14,8 +14,19 @@ for ($i=1; $i < 1800; $i++) {
   ];
 }
 
+for ($i=1; $i < 50; $i++) { 
+  $items[] = [
+  'article_id' => $i,
+  'description' => 'aqui toy y que',
+  'ref' => 'ji*3',
+  'url_image' => '',
+  'is_import' => false
+  ];
+}
+
 $data = [
   'mark' => 'renault',
+  'logo' => 'images/renault/tomorrowland.png',
   'records' => [
     [
     'type' => 'motor',
@@ -25,12 +36,11 @@ $data = [
 ];
 
 $mark = $data['mark'];
+$logo = $data['logo'];
 $type = $data['records'][0]['type'];
-
-//var_dump($mark);
 
 $viewGenerator = new ViewGenerator();
 $convertHtmlToPdf = new ConvertHtmlToPdf();
-$html = $viewGenerator->buildHtml($mark, $type, $items);
+$html = $viewGenerator->buildHtml($mark, $logo, $type, $items);
 //echo $html;
 $convertHtmlToPdf->convertToPdf($html, true);
