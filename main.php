@@ -4,7 +4,7 @@ require('ViewGenerator.php');
 require('ConvertHtmlToPdf.php');
 
 $items = array();
-for ($i=1; $i < 50; $i++) { 
+for ($i=1; $i < 1800; $i++) { 
   $items[] = [
   'article_id' => $i,
   'description' => 'aqui toy',
