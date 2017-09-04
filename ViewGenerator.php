@@ -87,7 +87,29 @@ $html = <<<EOD
   }
 
 </style>
-<page backtop="7mm" backbottom="7mm" backleft="10mm" backright="10mm">
+<page backtop="25mm" backbottom="10mm" backleft="10mm" backright="20mm">
+
+  <page_header>
+  <table style="padding:10px 0; border-top: 1px solid; border-bottom: 1px solid; width:100%;">
+    <tr class="fila">
+      <td id="col_1" style="width: 15%;">
+        <img style="width:50%" src="images/img_izq.png">
+      </td>
+      <td id="col_2" style="text-align:center; width: 55%;">
+        <span id="span1" style="font-size: 15px;">Aquí pueden ir más span o divs según requiera el diseño</span>
+        <br>
+        <span id="span2" style="font-size: 12px; color: #4d9;">Este es otro span con otros estilos</span>
+      </td>
+      <td id="col_3" style="width: 15%;">
+        <img style="width:50%"  src="images/img_der_1.png">
+      </td>
+      <td id="col_4" style="width: 15%;">
+        <img style="width:50%" src="images/img_der_2.png">
+      </td>
+    </tr>
+  </table>
+  </page_header>
+
   <page_footer>
     <table style="width: 100%; border: solid 1px black;">
       <tr>
